@@ -4,54 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contoh Halaman</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
             background-color: #f4f4f4;
         }
         .header {
             background-color: #B8336A;
             color: #E4DFDA;
             text-align: center;
-            padding: 10px 0;
-        }
-        .container {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 10px;
-            padding: 20px;
-        }
-        .biodata, .portfolio {
-            background-color: #E5FCFF;
-            border-radius: 5px;
-            padding: 20px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
-        .welcome {
-            grid-column: span 2;
-            text-align: center;
-            background-color: #ABDAFC;
-            padding: 20px;
-            border-radius: 5px;
-        }
-        .welcome img {
-            max-width: 100%;
-            height: auto;
+            padding: 20px 0;
         }
         .portfolio img {
             max-width: 100%;
             height: auto;
             border-radius: 5px;
-        }
-        @media (max-width: 768px) {
-            .container {
-                grid-template-columns: 1fr;
-            }
-            .welcome {
-                grid-column: span 1;
-            }
         }
     </style>
 </head>
@@ -63,47 +31,101 @@
 </div>
 
 <!-- Container -->
-<div class="container">
-    <!-- Biodata Section -->
-    <div class="biodata">
-        <h2>Biodata</h2>
-        <p><strong>Full Name:</strong> Nama Anda</p>
-        <p><strong>Education:</strong> Pendidikan Anda</p>
-        <p><strong>Pekerjaan:</strong> Pekerjaan Anda</p>
-        <p><strong>Contact:</strong> Kontak Anda</p>
-        <p><strong>Hobi:</strong> Hobi Anda</p>
-        <p><strong>Alamat:</strong> Alamat Anda</p>
-    </div>
+<div class="container mt-4">
+    <div class="row">
+        <!-- Biodata Section -->
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <h2 class="card-title">Biodata</h2>
+                    <p><strong>Full Name:</strong> Nama Anda</p>
+                    <p><strong>Education:</strong> Pendidikan Anda</p>
+                    <p><strong>Pekerjaan:</strong> Pekerjaan Anda</p>
+                    <p><strong>Contact:</strong> Kontak Anda</p>
+                    <p><strong>Hobi:</strong> Hobi Anda</p>
+                    <p><strong>Alamat:</strong> Alamat Anda</p>
+                </div>
+            </div>
+        </div>
 
-    <!-- Welcome Section -->
-    <div class="welcome">
-        <h2>Selamat Datang di Website Saya!</h2>
-        <p>Ini adalah contoh header dengan dua kolom. Kolom kiri berisi teks seperti ini</p>
-        <button>Pelajari Lebih Lanjut</button>
-        <img src="Picture html/picture_1.jpeg" alt="Contoh Gambar">
+        <!-- Welcome Section -->
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-body text-center">
+                    <h2 class="card-title">Selamat Datang di Website Saya!</h2>
+                    <p>Ini adalah contoh header dengan dua kolom. Kolom kiri berisi teks seperti ini</p>
+                    <button class="btn btn-primary" data-toggle="modal" data-target="#mystaticBackdrop">Pelajari Lebih Lanjut</button>
+                    <img src="Picture html/picture_1.jpeg" alt="Contoh Gambar" class="img-fluid mt-3">
+                </div>
+            </div>
+        </div>
     </div>
 
     <!-- Portfolio Section -->
-    <div class="portfolio">
-        <h2>My Portfolio</h2>
-        <div>
-            <img src="Picture html/picture_2.jpeg" alt="Project 1">
-            <p><b>Deskripsi:</b> Ini adalah proyek pertama saya.</p>
-        </div>
-        <div>
-            <img src="Picture html/picture_3.jpeg" alt="Project 2">
-            <p><b>Deskripsi:</b> Proyek kedua saya.</p>
-        </div>
-        <div>
-            <img src="Picture html/picture_4.jpeg" alt="Project 3">
-            <p><b>Deskripsi:</b> Proyek ketiga saya.</p>
-        </div>
-        <div>
-            <img src="Picture html/picture_5.jpeg" alt="Project 4">
-            <p><b>Deskripsi:</b> Proyek keempat saya.</p>
+    <div class="row mt-4">
+        <div class="col-12">
+            <h2>My Portfolio</h2>
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="card">
+                        <img src="Picture html/picture_2.jpeg" class="card-img-top" alt="Project 1">
+                        <div class="card-body">
+                            <p><b>Deskripsi:</b> Ini adalah proyek pertama saya.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card">
+                        <img src="Picture html/picture_3.jpeg" class="card-img-top" alt="Project 2">
+                        <div class="card-body">
+                            <p><b>Deskripsi:</b> Proyek kedua saya.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card">
+                        <img src="Picture html/picture_4.jpeg" class="card-img-top" alt="Project 3">
+                        <div class="card-body">
+                            <p><b>Deskripsi:</b> Proyek ketiga saya.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card">
+                        <img src="Picture html/picture_5.jpeg" class="card-img-top" alt="Project 4">
+                        <div class="card-body">
+                            <p><b>Deskripsi:</b> Proyek keempat saya.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>
 
+<!-- Modal -->
+<div class="modal fade" id="mystaticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="staticBackdropLabel">Informasi Lebih Lanjut</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>Ini adalah informasi lebih lanjut tentang website saya. Anda dapat menambahkan konten yang relevan di sini.</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Bootstrap JS and dependencies -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
