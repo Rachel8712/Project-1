@@ -1,0 +1,16 @@
+<?php
+$host = "localhost";
+$username = "root";
+$password = "";
+$database = "adelysia_cafe";
+
+$conn = mysqli_connect(hostname: $host, username: $username, password: $password, database: $database);
+
+
+if (!$conn) {
+    echo "Koneksi gagal";
+} else{
+    echo "Koneksi diterima";
+}
+
+?>
