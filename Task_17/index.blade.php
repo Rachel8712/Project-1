@@ -1,14 +1,14 @@
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-white leading-tight">
-            {{ __('Daftar Kategori Produk') }}
+            {{ __('Daftar Produk') }}
         </h2>
     </x-slot>
     <div class="container mt-5">
         <div class="header-section">
             <div>
-                <a href="{{ route('category-products-addnew') }}" class="btn btn-primary">
-                    <i class="fas fa-plus"></i> Tambah Kategori
+                <a href="{{ route('products-addnew') }}" class="btn btn-primary">
+                    <i class="fas fa-plus"></i> Tambah Produk
                 </a>
             </div>
         </div>
@@ -17,11 +17,11 @@
             <div class="card-header">
                 <div class="row">
                     <div class="col-md-6">
-                        <h5>Daftar Kategori</h5>
+                        <h5>Daftar Produk</h5>
                     </div>
                     <div class="col-md-6">
                         <div class="input-group mb-3 search-box">
-                            <input type="text" class="form-control" placeholder="Cari kategori...">
+                            <input type="text" class="form-control" placeholder="Cari produk...">
                             <button class="btn btn-outline-secondary" type="button">
                                 <i class="fas fa-search"></i>
                             </button>
@@ -35,18 +35,24 @@
                         <thead class="table-dark">
                             <tr>
                                 <th>ID</th>
-                                <th>Nama Kategori</th>
-                                <th>Jumlah Produk</th>
+                                <th>Nama Produk</th>
+                                <th>Deskripsi</th>
+                                <th>Stok</th>
+                                <th>Harga</th>
+                                <th>Gambar</th>
                                 <th>Aksi</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
                                 <td>1</td>
-                                <td>Elektronik</td>
-                                <td>125</td>
+                                <td>Americano</td>
+                                <td>Americano: Kopi, Air, Sejati.</td>
+                                <td>150</td>
+                                <td>Rp 15.000</td>
+                                <td><img scr="https://via.placeholder.com/150" alt="Americano"></td>
                                 <td>
-                                    <a href="{{ route('category-products-edit') }}" class="btn btn-sm btn-warning action-btn">
+                                    <a href="{{ route('products-edit') }}" class="btn btn-sm btn-warning action-btn">
                                         <i class="fas fa-edit"></i> Edit
                                     </a>
                                     <button class="btn btn-sm btn-danger action-btn" data-bs-toggle="modal" data-bs-target="#hapusModal">
@@ -55,13 +61,13 @@
                                 </td>
                             </tr>
                             <tr>
-                                <td>2</td>
+                                <!-- <td>2</td>
                                 <td>Fashion</td>
                                 <td>87</td>
                                 <td>
-                                    <a href="{{ route('category-products-edit') }}" class="btn btn-sm btn-warning action-btn">
+                                    <button class="btn btn-sm btn-warning action-btn" data-bs-toggle="modal" data-bs-target="#editModal">
                                         <i class="fas fa-edit"></i> Edit
-                                    </a>
+                                    </button>
                                     <button class="btn btn-sm btn-danger action-btn" data-bs-toggle="modal" data-bs-target="#hapusModal">
                                         <i class="fas fa-trash"></i> Hapus
                                     </button>
@@ -72,14 +78,14 @@
                                 <td>Kesehatan</td>
                                 <td>42</td>
                                 <td>
-                                    <a href="{{ route('category-products-edit') }}" class="btn btn-sm btn-warning action-btn">
+                                    <button class="btn btn-sm btn-warning action-btn" data-bs-toggle="modal" data-bs-target="#editModal">
                                         <i class="fas fa-edit"></i> Edit
-                                    </a>
+                                    </button>
                                     <button class="btn btn-sm btn-danger action-btn" data-bs-toggle="modal" data-bs-target="#hapusModal">
                                         <i class="fas fa-trash"></i> Hapus
                                     </button>
                                 </td>
-                            </tr>
+                            </tr> -->
                         </tbody>
                     </table>
                 </div>
